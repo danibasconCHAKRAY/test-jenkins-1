@@ -36,13 +36,13 @@ pipeline {
                 '''
             }
         } 
-//        stage('BuildDocker') {
-//            steps {
-//            	sh '''
-//            		docker build -t apptest:latest .
-//                '''
-//            }
-//        } 
+        stage('BuildDocker') {
+            steps {
+            	sh '''
+            		docker build -t apptest:latest .
+                '''
+            }
+        } 
 //    stage('PushDockerImage') {
 //            steps {
 //            	sh '''
