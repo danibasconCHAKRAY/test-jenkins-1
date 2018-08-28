@@ -36,22 +36,22 @@ pipeline {
                 '''
             }
         } 
-        stage('BuildDocker') {
-            steps {
-            	sh '''
-            		docker build -t apptest:latest .
-                '''
-            }
-        } 
-    stage('PushDockerImage') {
-            steps {
-            	sh '''
-            		docker tag apptest:latest danibasconchakray/apptest:latest
-					docker push danibasconchakray/apptest:latest
-					docker rmi apptest:latest
-                '''
-            }
-        } 
+//        stage('BuildDocker') {
+//            steps {
+//            	sh '''
+//            		docker build -t apptest:latest .
+//                '''
+//            }
+//        } 
+//    stage('PushDockerImage') {
+//            steps {
+//            	sh '''
+//            		docker tag apptest:latest danibasconchakray/apptest:latest
+//					docker push danibasconchakray/apptest:latest
+//					docker rmi apptest:latest
+//                '''
+//            }
+//        } 
   }
 }
 
